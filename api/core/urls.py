@@ -1,6 +1,9 @@
 
 from django.urls import path
-from core.views import ListGoalsView, ListUserView
+from core.views import (
+    ListGoalsView, ListUserView,
+    ListRoadMapView
+)
 
 urlpatterns = [
     path(
@@ -11,5 +14,11 @@ urlpatterns = [
     path(
         'users/',
         ListUserView.as_view(),
-        name='user-all')
+        name='user-all'
+    ),
+    path(
+        'roadmaps/',
+        ListRoadMapView.as_view(),
+        name='roadmap-all'
+    )
 ]
