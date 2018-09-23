@@ -1,0 +1,15 @@
+
+FROM python:3.6
+
+ENV PYTHONBUFFERED 1
+
+RUN mkdir /core
+
+WORKDIR /core/
+
+ADD ./requirements.txt /core/
+
+RUN pip install -r requirements.txt
+
+ADD . /core/
+
