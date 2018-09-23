@@ -1,10 +1,9 @@
 
 from rest_framework import generics
-from .models import Goal
-from .serializers import GoalSerializer
+from core.models import User
+from core.serializers import UserSerializer
 
-class ListGoalsView(generics.ListAPIView):
+class ListUserView(generics.ListAPIView):
 
-    queryset = Goal.objects.all()
-    serializer_class = GoalSerializer
-
+    queryset = User.objects.all()
+    serializer_class = UserSerializer

@@ -1,10 +1,15 @@
 
 from django.urls import path
-from .views.goal import ListGoalsView
+from core.views import ListGoalsView, ListUserView
 
 urlpatterns = [
-    path('goals/',
+    path(
+        'goals/',
         ListGoalsView.as_view(),
         name='goals-all'
-    )
+    ),
+    path(
+        'users/',
+        ListUserView.as_view(),
+        name='user-all')
 ]
