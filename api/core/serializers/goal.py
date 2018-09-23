@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Goal
+from core.models import Goal
 
 
 class GoalSerializer(serializers.ModelSerializer):

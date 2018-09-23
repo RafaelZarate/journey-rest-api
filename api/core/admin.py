@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Goal 
+from .models.goal import Goal 
 
 admin.site.register(Goal)
 

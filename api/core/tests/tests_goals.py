@@ -3,8 +3,8 @@ from django.urls import reverse
 from rest_framework.test import APITestCase, APIClient
 from rest_framework.views import status
 
-from .models import Goal
-from .serializers import GoalSerializer
+from core.models import Goal
+from core.serializers import GoalSerializer
 
 class BaseViewTest(APITestCase):
     client = APIClient()

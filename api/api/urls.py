@@ -24,5 +24,5 @@ schema_view = get_swagger_view(title="Journey API")
 urlpatterns = [
     url(r'^$', schema_view),
     path('admin/', admin.site.urls),
-    path('api/v1/', include('journey.urls'))
+    path('api/v1/', include('core.urls'))
 ]

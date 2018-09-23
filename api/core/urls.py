@@ -1,6 +1,6 @@
 
 from django.urls import path
-from .views import ListGoalsView
+from .views.goal import ListGoalsView
 
 urlpatterns = [
     path('goals/',
