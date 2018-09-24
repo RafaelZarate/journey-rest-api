@@ -2,7 +2,7 @@
 from django.urls import path
 from core.views import (
     ListGoalsView, ListUserView,
-    ListRoadMapView
+    ListRoadMapView, ListJourneyView
 )
 
 urlpatterns = [
@@ -20,5 +20,10 @@ urlpatterns = [
         'roadmaps/',
         ListRoadMapView.as_view(),
         name='roadmap-all'
+    ),
+    path(
+        'journeys/',
+        ListJourneyView.as_view(),
+        name='journey-all'
     )
 ]

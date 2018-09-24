@@ -16,7 +16,7 @@ class BaseViewTest(APITestCase):
         create_roadmap()
         create_roadmap()
 
-class GetAllGoalsTestCase(BaseViewTest):
+class GetAllRoadMapsTestCase(BaseViewTest):
 
     def test_get_all_goals(self):
         response = self.client.get(
