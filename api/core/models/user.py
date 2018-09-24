@@ -9,6 +9,8 @@ class User(models.Model):
     dob = models.DateField(max_length=8)
     country_code = models.IntegerField(default=52)
     is_admin = models.BooleanField(default=False)
+    # updated_at = models.DateTimeField(auto_now=True)
+    # created_at = models.DateTimeField(auto_now_add=True, null=True)
 
     @property
     def full_name(self):

@@ -8,7 +8,8 @@ class Journey(models.Model):
     type = models.IntegerField(choices=JOURNEY_TYPE_CHOICES)
     status = models.IntegerField(choices=JOURNEY_STATUS_CHOICES)
     due_date = models.DateTimeField(null=True, blank=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    # created_at = models.DateTimeField(auto_now_add=True, null=True)
+    # updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f"{self.title} - {self.status}"
+        return f"{self.id} - {self.status}"

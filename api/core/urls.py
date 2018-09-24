@@ -1,15 +1,15 @@
 
 from django.urls import path
 from core.views import (
-    ListGoalsView, ListUserView,
+    ListTaskView, ListUserView,
     ListRoadMapView, ListJourneyView
 )
 
 urlpatterns = [
     path(
-        'goals/',
-        ListGoalsView.as_view(),
-        name='goals-all'
+        'tasks/',
+        ListTaskView.as_view(),
+        name='task-all'
     ),
     path(
         'users/',
