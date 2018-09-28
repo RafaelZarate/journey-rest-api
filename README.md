@@ -8,5 +8,5 @@ TODO:
     - TBD
 - Authentication using jwt
 - Finish docker-compose
-- Deploy to EC2
-- Set up CI/CD
+- Automate deployment
+- Set up CI
