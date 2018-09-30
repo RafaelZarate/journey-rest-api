@@ -3,4 +3,5 @@
  djangorestframework
  djangorestframework-jwt
  django-rest-swagger
+ django-filters
  arrow
