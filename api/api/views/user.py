@@ -13,9 +13,10 @@ class ListUserView(generics.ListAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
-class UserDataView(APIView):
 
+class UserDataView(APIView):
     permission_classes = (AllowAny, )
+    
     def get(self, request):
         return Response(
             dict(
