@@ -1,7 +1,11 @@
+ 
+ arrow
+ corsheaders
  Django>=2.0
  psycopg2==2.7.3.2 
  djangorestframework
  djangorestframework-jwt
  django-rest-swagger
  django-filters
- arrow
+ djangorestframework_camel_case
+ 

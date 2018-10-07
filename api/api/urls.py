@@ -2,7 +2,8 @@
 from django.urls import path
 from api.views import (
     ListTaskView, ListUserView,
-    ListRoadMapView, ListJourneyView
+    ListRoadMapView, ListJourneyView,
+    UserDataView
 )
 
 urlpatterns = [
@@ -25,5 +26,10 @@ urlpatterns = [
         'journeys/',
         ListJourneyView.as_view(),
         name='journey-all'
+    ),
+    path(
+        'users/me',
+        UserDataView.as_view(),
+        name='user-data'
     )
 ]

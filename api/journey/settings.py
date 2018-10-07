@@ -17,6 +17,7 @@ ENV_LOCAL = False
 ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', 'localhost']
 
 if os.environ.get('ENVIRONMENT', '') == 'PRODUCTION':
+    CORS_ORIGIN_ALLOW_ALL = ['http://127.0.0.1:3000']
     ENV_PROD = True
     ENVIRONMENT = 'PRODUCTION'
     API_HOST = 'tbd'
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework_swagger',
+    'corsheaders',
     # 'django_filters',
     'core',
     'api'
@@ -51,6 +53,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -154,7 +157,7 @@ USE_TZ = True
 
 JWT_VERIFY = True
 JWT_VERIFY_EXPIRATION = False
-JWT_AUTH_HEADER_PREFIX = 'Bearer'
+JWT_AUTH_HEADER_PREFIX = 'Auth-Journey'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
@@ -180,11 +183,11 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.BasicAuthentication',
     ),
     'DEFAULT_RENDERER_CLASSES': (
-        # 'djangorestframework_camel_case.render.CamelCaseJSONRenderer',
+        'djangorestframework_camel_case.render.CamelCaseJSONRenderer',
         'rest_framework.renderers.JSONRenderer',
     ),
     'DEFAULT_PARSER_CLASSES': (
-        # 'djangorestframework_camel_case.parser.CamelCaseJSONParser',
+        'djangorestframework_camel_case.parser.CamelCaseJSONParser',
         # 'rest_framework.parsers.FormParser',
         'rest_framework.parsers.JSONParser',
     )
