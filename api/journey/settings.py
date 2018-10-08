@@ -159,6 +159,12 @@ JWT_VERIFY = True
 JWT_VERIFY_EXPIRATION = False
 JWT_AUTH_HEADER_PREFIX = 'Auth-Journey'
 
+EMAIL_USE_TLS = True
+EMAIL_HOST =  os.environ.get('EMAIL_HOST', '')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
+EMAIL_PORT = 587
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
